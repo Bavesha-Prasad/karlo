@@ -1,0 +1,174 @@
+/* ==========================================================================
+   KLARO FOOTER STYLES
+   Professional dark footer that complements the black header.
+   ========================================================================== */
+
+.klaro-footer {
+  background-color: #0b0f19;
+  color: #94a3b8;
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: auto;
+}
+
+.klaro-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr 1.5fr;
+  gap: var(--space-10);
+  margin-bottom: var(--space-12);
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  text-decoration: none;
+  margin-bottom: var(--space-4);
+}
+
+.footer-wordmark {
+  font-family: var(--font-family-base);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+}
+
+.footer-brand-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  font-size: var(--font-size-sm);
+  color: #94a3b8;
+  line-height: var(--line-height-relaxed);
+  max-width: 320px;
+  margin-bottom: var(--space-4);
+}
+
+.footer-demo-badge span {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.04em;
+  color: var(--color-sky-200);
+  background-color: rgba(2, 132, 199, 0.15);
+  border: 1px solid rgba(2, 132, 199, 0.3);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-4);
+  letter-spacing: -0.01em;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: var(--font-size-sm);
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-info-text {
+  font-size: var(--font-size-sm);
+  color: #94a3b8;
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-3);
+}
+
+.footer-info-text strong {
+  color: #e2e8f0;
+}
+
+/* Portfolio Concept Disclaimer */
+.footer-disclaimer {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.footer-disclaimer p {
+  font-size: var(--font-size-xs);
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.footer-disclaimer strong {
+  color: #e2e8f0;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: var(--font-size-xs);
+  color: #64748b;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #64748b;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.footer-bottom-links a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.footer-bottom-links a:hover {
+  color: #ffffff;
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+  .klaro-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+@media (max-width: 640px) {
+  .klaro-footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+}

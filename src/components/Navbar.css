@@ -1,0 +1,214 @@
+/* ==========================================================================
+   KLARO HEADER & NAVBAR STYLES
+   Professional black header with restrained, elegant styling.
+   ========================================================================== */
+
+.klaro-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #0b0f19; /* Restrained, deep black/slate */
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Concept Notice Strip */
+.klaro-top-banner {
+  background-color: #05080f;
+  color: #94a3b8;
+  font-size: var(--font-size-xs);
+  text-align: center;
+  padding: 6px var(--space-4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  letter-spacing: 0.02em;
+}
+
+.klaro-top-banner strong {
+  color: #e2e8f0;
+}
+
+.klaro-nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+/* Brand Wordmark */
+.klaro-brand {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.klaro-wordmark {
+  font-family: var(--font-family-base);
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  transition: opacity var(--transition-fast);
+}
+
+.klaro-brand:hover .klaro-wordmark {
+  opacity: 0.85;
+}
+
+.klaro-brand-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+/* Navigation List */
+.klaro-nav-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin: 0;
+  padding: 0;
+}
+
+.klaro-nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.klaro-nav-link {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: var(--space-2) 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.klaro-nav-link:hover {
+  color: #ffffff;
+}
+
+.klaro-nav-link.active {
+  color: #ffffff;
+  font-weight: var(--font-weight-semibold);
+}
+
+.klaro-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-sky-600);
+  border-radius: var(--radius-full);
+}
+
+/* Book Now CTA Button */
+.klaro-book-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-sky-600);
+  color: #ffffff !important;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.klaro-book-btn:hover {
+  background-color: var(--color-sky-700);
+  transform: translateY(-1px);
+}
+
+/* Mobile Menu Toggle Button */
+.klaro-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 8px;
+  cursor: pointer;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+/* Mobile Responsive */
+@media (max-width: 860px) {
+  .klaro-menu-toggle {
+    display: flex;
+  }
+
+  .klaro-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #0b0f19;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    padding: var(--space-6) var(--space-6) var(--space-8);
+  }
+
+  .klaro-nav.nav-open {
+    display: block;
+  }
+
+  .klaro-nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-4);
+  }
+
+  .klaro-nav-link {
+    display: block;
+    padding: var(--space-3) var(--space-2);
+    font-size: var(--font-size-base);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .klaro-nav-link.active::after {
+    display: none;
+  }
+
+  .klaro-nav-action {
+    margin-top: var(--space-4);
+  }
+
+  .klaro-book-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: var(--font-size-base);
+  }
+
+  /* Hamburger transform when open */
+  .hamburger-bar.open:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger-bar.open:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-bar.open:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
